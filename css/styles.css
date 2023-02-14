@@ -1,0 +1,822 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, /*body,*/ div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.main{
+  margin:0 124px 56px 124px;
+}
+
+.header {
+  margin:28px 32px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.header__contacts {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.header__contacts a {
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  margin-right:64px;
+  padding-top:4px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #1C1A26;
+}
+
+.header__contacts a:hover,
+.footer a:hover {
+  color: #F9512E;
+  transition: 0.4s;
+}
+
+.icon-phone {
+  margin-right:4px;
+}
+
+.bakery {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 178px;
+}
+
+.bakery img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 1;
+  animation: pulse 4s linear infinite;
+  pointer-events: none;
+}
+
+.bakery p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #1C1A26;
+  margin-bottom: 40px;
+}
+
+.bakery h1 {
+  margin-bottom: 64px;
+  font-weight: 400;
+  font-size: 144px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #1C1A26;
+  text-align: center;
+  z-index: 2;
+}
+
+.bakery button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 71px;
+  width: 280px;
+  height: 56px;
+  border: 2px solid #F9512E;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #F9512E;
+  white-space: nowrap;
+}
+
+.bakery button:hover {
+  background: #F9512E;
+  border-radius: 32px;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+.bakery button:focus {
+  background: #B3341A;
+  border-radius: 32px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.bakery button:disabled {
+  border: 2px solid #FBA28F;
+  box-sizing: border-box;
+  border-radius: 32px;
+  color: white;
+}
+
+.bakery svg {
+  margin-right: 4px;
+}
+
+/* 3 block */
+
+.products {
+  margin-bottom: 178px;
+}
+
+.products h2 {
+  font-weight: 400;
+  font-size: 72px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #1C1A26;
+  margin-bottom: 24px;
+}
+
+.about-us__text h2{
+  width: 584px;
+  font-weight: 400;
+  font-size: 72px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #1C1A26;
+}
+
+.products__main-text {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #1C1A26;
+  margin-bottom: 80px;
+}
+
+.products__text,
+.about-us__text p{
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #1C1A26;
+  margin-top:8px;
+  line-height: 150%;
+  margin-bottom: 16px;
+}
+
+.about-us__text p {
+  margin: 0;
+}
+
+.products-cakes,
+.products-cookies {
+  display: flex;
+  justify-content:flex-start;
+}
+
+.products-cakes,
+.products-donuts {
+  margin-bottom: 80px;
+}
+
+.products-cakes > div:first-child,
+.products-donuts > div:first-child,
+.products-cookies > div:first-child {
+  margin-right:24px;
+}
+
+.products-donuts {
+  display: flex;
+  justify-content:flex-end;
+}
+
+.products img {
+  margin-bottom: 16px;
+}
+.products__block > div {
+  width: 432px;
+}
+
+.products__block img {
+  height: 560px;
+  border-radius: 8px;
+}
+
+.products__block img:hover {
+  transform: scale(1.1);
+  transition: 0.6s;
+}
+
+.products__title {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #7F8096;
+}
+
+.products__btn {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #F9512E;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.products__btn:hover {
+  color: #bd5b47;
+}
+
+.about-us{
+  background-image: url(../img/Crumbs.png);
+  background-repeat: no-repeat;
+  height: 673px;
+  background-position: center;
+}
+
+.about-us__text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 144px;
+}
+
+.about-us__text p {
+  width: 584px;
+}
+
+.about-us__num {
+  font-weight: 400;
+  font-size: 96px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #1C1A26;
+  margin: 0 0 8px 0px;
+}
+
+.about-us__inform,
+.about-us_first-part,
+.about-us_second-part {
+  display: flex;
+}
+
+.about-us__inform {
+  justify-content: space-between;
+}
+
+.about-inform {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us__named {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #7F8096;
+}
+
+/* 4 block */
+
+.footer {
+  background: #1C1A26;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding:88px 124px ;
+
+}
+
+.footer__nav ul {
+  margin-top: 61px;
+  margin-bottom: 48px;
+}
+
+.footer li:first-child a {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #7F8096;
+}
+
+.footer li {
+  text-decoration:none;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.social-buttons {
+  width: 100%;
+}
+
+.social-buttons button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  margin-right: 32px;
+}
+
+.social-buttons button:hover,
+.social-buttons button:focus {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  background-color: #585370;
+}
+
+
+.footer__contact h2 {
+  font-weight: 400;
+  font-size: 72px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.footer__contact p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.footer__text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__text p {
+  margin-top: 16px;
+}
+
+.footer__title {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #7F8096;
+}
+
+.header__menu {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    margin: 0 44px 56px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+
+  /* Tablet version */
+
+  .header__contacts {
+    display: none !important;
+    position: absolute;
+    top:60px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .header__contacts.active {
+    display: block !important;
+    background-color: white;
+    box-shadow: 2px 2px 2px 1px rgba(74, 74, 92, 0.2);
+  }
+
+  .header__contacts.active li {
+    padding: 15px 20px; 
+    box-shadow: 2px 2px 2px 1px rgba(174, 174, 187, 0.2);
+  }
+  
+
+  .header__contacts a {
+    margin-right: 0;
+    padding-top: 0;
+  }
+  
+  .header {
+    position: relative;
+    padding: 16px 16px;
+    margin: 0 0 80px 0;
+  }
+
+  .bakery {
+    height: auto;
+    margin-bottom: 228px;
+  }
+
+  .header__menu {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .main{
+    margin: 0 44px 152px 44px;
+  }
+
+  .header__menu:hover {
+    background-color: rgb(240, 228, 205);
+  }
+  
+  .bakery p {
+   margin-bottom: 146px;
+  }
+
+  .bakery img {
+    width: 326px;
+    height: 328px;
+  }
+
+  .bakery h1 {
+    font-weight: 400;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 210px;
+  }
+
+  .bakery button {
+    margin: 0 auto;
+  }
+  
+  .products {
+    margin-bottom: 152px;
+    overflow: hidden;
+  }
+
+  .products h2{
+    font-size: 56px;
+    margin-bottom: 24px;
+  }
+
+  .products-cakes,
+  .products-cookies,
+  .products-donuts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .products-cakes img,
+  .products-cookies img ,
+  .products-donuts img {
+    width: 100%;
+    height: 424px;
+  }
+
+  .about-us {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .about-us__text h2 {
+    font-weight: 400;
+    font-size: 56px;
+  } 
+
+  .about-us__text {
+    margin-bottom: 72px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: #1C1A26;
+  }
+
+  .about-us__text p {
+    width: 50%;
+    line-height: 150%;
+  }
+
+  .about-us__inform {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-inform {
+    width: 50%;
+  }
+
+  .about-inform:nth-child(1),
+  .about-inform:nth-child(2) {
+    margin-bottom: 80px;
+  }
+
+  .footer {
+    padding: 88px 44px;
+  }
+
+  .footer__nav ul {
+    margin-top: 98px;
+    margin-bottom: 102px;
+  }
+
+  .footer__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__text div:first-child {
+    margin-bottom: 40px;
+  }
+
+  .footer__contact h2 {
+    width: 328px;
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  /* Mobile version */
+
+  .header__contacts {
+    display: none !important;
+    position: absolute;
+    top:25px;
+    right: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .header__contacts.active {
+    display: block !important;
+    background-color: white;
+    box-shadow: 2px 2px 2px 1px rgba(74, 74, 92, 0.2);
+  }
+
+  .header__contacts.active li {
+    padding: 13px 28px; 
+    box-shadow: 2px 2px 2px 1px rgba(174, 174, 187, 0.2);
+  }
+
+  .header__contacts a {
+    margin-right: 0;
+    padding-top: 0;
+  }
+  
+  .products__block > div {
+    width: auto;
+  }
+
+  .products__block > div img {
+    height: auto;
+  }
+
+  .header {
+    position: relative;
+    margin: 16px;
+  }
+
+  .header__menu {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main {
+      margin: 32px 16px 72px 16px;
+  }
+
+  .header__menu:hover {
+    background-color: rgb(240, 228, 205);
+  }
+  
+  .bakery p {
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+  }
+
+  .bakery {
+    position: static;
+    background-image: none;
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .bakery img {
+    position: static;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .bakery h1 {
+    font-size: 64px;
+    line-height: 85%;
+    white-space: normal;
+    margin-bottom: 0;
+  }
+
+  .bakery__img {
+    display: block;
+    width: 288px;
+    height: 290px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bakery button {
+    width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+  }
+
+  .products {
+    margin-bottom: 70px;
+  }
+
+  .products h2 {
+    font-size: 48px;
+  }
+
+  .products__main-text {
+    margin-bottom: 56px;
+  }
+
+  .products-cakes,
+  .products-donuts,
+  .products-cookies {
+    display: block;
+  }
+
+  .products-cakes,
+  .products-donuts,
+  .products-cookies {
+    margin-bottom: 0;
+  }
+
+  .products-cakes > div,
+  .products-donuts > div,
+  .products-cookies > div {
+    margin-bottom: 56px;
+  }
+
+
+  .products-cakes img,
+  .products-donuts img,
+  .products-cookies img {
+    width: 100%;
+    height: 356px;
+  }
+
+  .products-cakes > div:first-child, 
+  .products-donuts > div:first-child,
+  .products-cookies > div:first-child {
+    margin-right: 0;
+  }
+
+  .about-us__text {
+    display: block;
+  }
+
+  .about-us {
+    height: auto;
+  }
+
+  .about-us__text p {
+    width: 100%;
+    line-height: 150%;
+  }
+
+  .about-us__text h2 {
+    width: auto;
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+
+  .about-inform {
+    margin-bottom: 48px;
+  }
+
+  .about-us__text {
+    margin-bottom: 64px;
+  }
+
+  .about-us__inform {
+    display: block;
+  }
+
+  .footer {
+    display: block;
+    padding: 64px 136px 112px 16px;
+  }
+
+  .footer ul {
+    margin-top:40px; 
+  }
+
+  .footer__contact h2 {
+    font-size: 48px;
+    width: 219px;
+  }
+ 
+  .footer__text {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .footer__phone {
+    margin-bottom: 40px;
+  }
+
+  .footer__text span {
+    margin-bottom: 16px;
+  }
+
+  .social-buttons {
+    display: flex;
+  }
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%,0) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%,0) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%,0) scale(1);
+  }
+    
+}
